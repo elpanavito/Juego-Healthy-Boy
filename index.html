@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HealthyBoy</title>
+    
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./assets/css/main.css.map" />
+        
+        <script src="//cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.min.js"></script>
+        <script src="js/scene-one.js"></script>
+        <script src="js/scene-two.js"></script>
+        <script src="js/scene-three.js"></script>
+        <script src="js/scene-four.js"></script>
+
+
+    </head>
+    <body>
+        <div id="game"></div>
+        <script>
+
+            const phaserConfig = {
+
+                type: Phaser.AUTO,
+                parent: "game",
+                scale: {
+                    mode: Phaser.Scale.FIT,
+
+                    autoCenter: Phaser.Scale.CENTER_BOTH,
+                    width: 1180,
+                    height: 570
+                },
+                physics: {
+                    default: 'arcade',
+                    arcade: {
+                        gravity: { y: 300 },
+                        debug: false
+                    }
+                },
+                backgroundColor: "#0cb0ff",
+                scene: [ SceneOne, SceneTwo, SceneThree, SceneFour ]
+            };
+
+            var score = 0;
+            var score_2 = 0;
+            var scoreText;
+            let bg_music;
+
+            const game = new Phaser.Game(phaserConfig);
+            
+
+            </script>
